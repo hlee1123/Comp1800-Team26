@@ -1,5 +1,6 @@
 ## My Web Application (Title)
-
+Potapova Tatiana
+Face Mask App
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contents](#content)
@@ -12,7 +13,7 @@ Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap 
-* ...
+
 	
 ## Content
 Content of the project folder:
