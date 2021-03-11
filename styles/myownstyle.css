@@ -47,7 +47,7 @@
 .editProfile{
     margin: 0;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 20%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -55,8 +55,8 @@
 .addItem{
     margin: 0;
     position: absolute;
-    top: 54%;
-    left: 70%;
+    top: 50%;
+    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -77,11 +77,11 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-.addButton{
+.addItemButton{
     margin: 0;
     position: absolute;
-    top: 93%;
+    top: 30%;
     left: 70%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-400%, -50%); 
+    transform: translate(-50%, -50%); 
 }

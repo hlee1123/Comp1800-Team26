@@ -41,42 +41,70 @@
     </nav>
 
     <div class="container">
-        <h3 class="display-4">Welcome Back, <span id="name-goes-here"></span>!</h3>
-    </div>
-    <div>
-        <img src="store-placeholder.png" class="img-fluid" alt="Face Mask image" height="200" width="200">
-    </div>
+        <form>
+            <div class="addItem">
+                <h2>Add Item</h2>
+                <div class="form-group">
+                    <label for="exampleFormControl">Item Name</label>
+                    <input class="form-control" ></input>
+                </div>
+                <div class="form-group">
+                    <label for="inputType">Mask Type</label>
+                    <select id="inputType" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>Cloth</option>
+                      <option>Surgical</option>
+                     <option>Cone</option>
+                      <option>N95</option>
+                    </select>
+                  </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Item Description</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Current Stock</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1">
+                  </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="kidsCheck">
+                    <label class="form-check-label" for="kidsCheck">
+                      kids
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="SCheck">
+                    <label class="form-check-label" for="SCheck">
+                      S
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="MCheck">
+                    <label class="form-check-label" for="MCheck">
+                      M
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="LCheck">
+                    <label class="form-check-label" for="LCheck">
+                      L
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Price</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="$">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Item image</label>
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+                  <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Add Item</button>
+                  </div>
 
-    <div class="container">
-        <div class="editProfile">
-            <div>Store Name:</div>
-            <div>City: </div>
-            <div>Address: </div>
-            <div class="overflow-visible">
-                <a type="button" href="sellerAccount.html" class="btn btn-outline-primary">Edit Profile</a>
-            </div>
-        </div>
-        <div class="addItemButton">
-            <a type="button" href="addItem.html" class="btn btn-primary">Add Item</a>
-            <p></p>
-            <a type="button" href="#" class="btn btn-success">Analytics</a>
+            </form>
         </div>
     </div>
-
-        <!----placeholder for map-->
-        <div class="map">
-
-        </div>
-    
-        <div id="button-container">
-            <div class="bottom-1">
-                <button type="button" class="btn btn-light btn-lg">List</button>
-            </div>
-    
-            <div class="bottom-2">
-                <button type="button" class="btn btn-light btn-lg">Map</button>
-            </div>
-        </div>
 
     <div class="container-fluid fixed-bottom">
         <nav class="navbar navbar-expand navbar-light bg-light">
@@ -135,31 +163,7 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script>
-        var user = firebase.auth().currentUser;
-        var name, email;
 
-        if (user != null) {
-            name = user.displayName;
-            email = user.email;
-        }
-
-        function displayName() {
-            db.collection("users").get()
-                .then(function (snap) {
-                    snap.forEach(function (doc) {
-                        var n = doc.data().name;
-                        console.log(n);
-                        var userEmail= doc.data().email;
-                        console.log(userEmail);
-                        document.getElementById("name-goes-here").innerText = n;
-                    })
-
-                })
-        }
-        displayName();
-
-</script>
 
 
 </body>
