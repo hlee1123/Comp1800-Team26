@@ -17,16 +17,26 @@
     transform: translate(-50%, -50%);
 }
 
+#button-container {
+    display: flex;
+    position: fixed;
+    top: 83%;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 5px 0px 5px;
+ 
+   
+}
 .bottom-2 {
   
-    position: fixed;
+
     top: 80%;
-    left: 80%;
+   
 }
 .bottom-1 {
-    position: fixed;
+    
     top: 80%;
-    left: 10%;
+   
 }
 
 .map {
