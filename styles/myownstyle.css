@@ -1,0 +1,47 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+
+.brand-centered {
+    display: flex;
+    justify-content: space-around;
+    
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#button-container {
+    display: flex;
+    position: fixed;
+    top: 83%;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 5px 0px 5px;
+ 
+   
+}
+.bottom-2 {
+  
+
+    top: 80%;
+   
+}
+.bottom-1 {
+    
+    top: 80%;
+   
+}
+
+.map {
+    width: 100%;
+    height: 500px;
+    
+}
+
