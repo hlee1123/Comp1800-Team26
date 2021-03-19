@@ -61,15 +61,13 @@
 
     <div id="button-container">
         <div class="bottom-1">
-            <button type="button" class="btn btn-light btn-lg">List</button>
+            <a href="filtersList.html"><button type="button" class="btn btn-light btn-lg">List</button></a>
         </div>
 
         <div class="bottom-2">
             <button type="button" class="btn btn-light btn-lg">Map</button>
         </div>
     </div>
-
-
 
 
     <div class="container-fluid fixed-bottom">
@@ -144,7 +142,7 @@
                     snap.forEach(function (doc) {
                         var n = doc.data().name;
                         console.log(n);
-                        var userEmail= doc.data().email;
+                        var userEmail = doc.data().email;
                         console.log(userEmail);
                         document.getElementById("name-goes-here").innerText = n;
                     })
@@ -153,7 +151,7 @@
         }
         displayName();
 
-</script>
+    </script>
 
 
 </body>
