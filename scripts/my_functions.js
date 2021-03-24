@@ -24,6 +24,7 @@ function sayHello() {
 sayHello();
 
 
+
 function writeStores() {
     var storesRef = db.collection("stores");
     storesRef.add({
