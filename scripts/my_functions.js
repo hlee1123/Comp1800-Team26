@@ -83,3 +83,29 @@ function writeStores() {
 // citiesQuery();
 
 // Initialize and add the map
+function writeReviews(){
+    var reviewRef = db.collection("reviews");
+    reviewRef.add({
+        name: "Mona lisa",            
+        description:"I highly recomend this store! I am very happy with my new mask!",
+        rating: 5
+    });
+}
+//writeReviews();
+
+function reviewsQuery(){
+    db.collection("reviews")
+    .get()
+    .then(function(snap){
+        snap.forEach(function(doc){
+            var n = doc.data().name;
+            var desc = doc.data().description;
+            var r = doc.data().rating;
+            console.log(n);
+            var newdom = "<div> " + "<b>" +  n + "</b>" + "<br>" + desc + "<br>" + r + "</div>";
+            $("#reviews-go-here").append(newdom);
+            //document.getElementById("cities-go-here").innerHTML = newdom;
+        })
+    })
+}
+reviewsQuery();
