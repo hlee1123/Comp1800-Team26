@@ -23,43 +23,47 @@ function sayHello() {
 }
 sayHello();
 
-
-
 function writeStores() {
     var storesRef = db.collection("stores");
     storesRef.add({
-        // code: "YVR",
+       
         name: "Store1",
-				carly: true,             //
-        // hemisphere: "north",
-        // population: 675218,
-        // picture: "yvr.jpg"
         address: 123,
-        telephone: 604123456
+        phone: 604123456,
+        
     });
     storesRef.add({
-        // code: "YVR",
         name: "Store2",
-				carly: true,             //
-        // hemisphere: "north",
-        // population: 675218,
-        // picture: "yvr.jpg"
-        address: 111,
-        telephone: 604123457
+        address: 123,
+        phone: 604123456,
     });
     storesRef.add({
-        // code: "YVR",
         name: "Store3",
-				carly: true,             //
-        // hemisphere: "north",
-        // population: 675218,
-        // picture: "yvr.jpg"
-        address: 222,
-        telephone: 60411111
+        address: 123,
+        phone: 604123456,
     });
     
 }
 //writeStores();
+
+function writeProducts() {
+    var productRef = db.collection("products");
+    productRef.add({
+       
+        name: "Mask1",
+        price: 10,
+    });
+    productRef.add({
+        name: "Mask2",
+        price: 20,
+    });
+    productRef.add({
+        name: "Mask3",
+        price: 30,
+    });
+    
+}
+//writeProducts();
 
 // function citiesQuery(){
 //     db.collection("cities")
