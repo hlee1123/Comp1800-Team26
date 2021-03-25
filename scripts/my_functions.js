@@ -66,3 +66,5 @@ function writeStores() {
 //     })
 // }
 // citiesQuery();
+
+// Initialize and add the map
