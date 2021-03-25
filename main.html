@@ -46,6 +46,7 @@
     </div>
 
     <div id="stores-go-here"> </div>
+    
     <div>
         <img src="1.jpg" class="img-fluid" alt="Face Mask image">
     </div>
@@ -131,31 +132,7 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <!-- <script>
-        var user = firebase.auth().currentUser;
-        var name, email;
 
-        if (user != null) {
-            name = user.displayName;
-            email = user.email;
-        }
-
-        function displayName() {
-            db.collection("users").get()
-                .then(function (snap) {
-                    snap.forEach(function (doc) {
-                        var n = doc.data().name;
-                        console.log(n);
-                        var userEmail = doc.data().email;
-                        console.log(userEmail);
-                        document.getElementById("name-goes-here").innerText = n;
-                    })
-
-                })
-        }
-        displayName();
-
-    </script> -->
     <script src="scripts/my_functions.js"></script>
 
 </body>
