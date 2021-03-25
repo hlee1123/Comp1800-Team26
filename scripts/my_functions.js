@@ -46,6 +46,25 @@ function writeStores() {
 }
 //writeStores();
 
+function writeProducts() {
+    var productRef = db.collection("products");
+    productRef.add({
+       
+        name: "Mask1",
+        price: 10,
+    });
+    productRef.add({
+        name: "Mask2",
+        price: 20,
+    });
+    productRef.add({
+        name: "Mask3",
+        price: 30,
+    });
+    
+}
+//writeProducts();
+
 // function citiesQuery(){
 //     db.collection("cities")
 //     .where("population", ">", 1000000)
