@@ -95,7 +95,7 @@ function writeReviews(){
         rating: 5
     });
 }
-//writeReviews();
+writeReviews();
 
 function reviewsQuery(){
     db.collection("reviews")
