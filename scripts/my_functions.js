@@ -46,6 +46,21 @@ function writeStores() {
 }
 //writeStores();
 
+function displayStores(){
+    db.collection("stores").get()
+    .then(function(snap){
+        snap.forEach(function(doc){
+            var n = doc.data().name;             //gets the name field
+            console.log(n);
+            // var storeid = doc.data().code;        //gets the unique ID field
+            // console.log(storeid);
+            document.getElementById(storeid).innerText = n;
+        })
+
+    })
+}
+displayStores();
+
 function writeProducts() {
     var productRef = db.collection("products");
     productRef.add({

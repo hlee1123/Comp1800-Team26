@@ -1,12 +1,12 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyB4NwiF3Ki92PS2khKDYS7NUDyhQCc0ky4",
-  authDomain: "demomarch02.firebaseapp.com",
-  projectId: "demomarch02",
-  storageBucket: "demomarch02.appspot.com",
-  messagingSenderId: "1069803822504",
-  appId: "1:1069803822504:web:8c4760f91c69ed4d15519d"
-  };
+  apiKey: "AIzaSyDUU30ZLAR3hYRy-2NtiIDtYpnwuyoNWzI",
+  authDomain: "team26-dbe9b.firebaseapp.com",
+  projectId: "team26-dbe9b",
+  storageBucket: "team26-dbe9b.appspot.com",
+  messagingSenderId: "474753985079",
+  appId: "1:474753985079:web:a7a0b9020e9183c757edb2"
+};
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();           //add this to read/write
