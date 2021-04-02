@@ -95,7 +95,7 @@ function writeReviews(){
         rating: 5
     });
 }
-writeReviews();
+//writeReviews();
 
 function reviewsQuery(){
     db.collection("reviews")
@@ -113,3 +113,24 @@ function reviewsQuery(){
     })
 }
 reviewsQuery();
+
+function editSellerAccount(){
+    document.getElementById("editAccount").addEventListener('click', function(){
+        firebase.auth().onAuthStateChanged(function(user){
+
+            var name = document.getElementById("store-name").value;
+            var city = document.getElementById("city").value;
+            var address = document.getElementById("address").value;
+
+            db.collection("users")
+                .doc(user.uid)
+                .colloction("stores")
+                .update({
+                    "store-name": name,
+                    "city": city,
+                    "address": address
+                })
+        })
+    })
+}
+editSellerAccount();

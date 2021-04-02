@@ -52,15 +52,15 @@
                     <h3>Edit Profile</h3>
                     <div class="form-group">
                         <label for="exampleFormControl">Store Name</label>
-                        <input class="form-control"></input>
+                        <input class="form-control" id="store-name"></input>
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Store Image</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" id="formFile" accept="image/*" id="store-image">
                       </div>
                     <div class="form-group">
                         <label for="inputState">City</label>
-                        <select id="inputState" class="form-control">
+                        <select id="inputState" class="form-control" id="city">
                           <option selected>Choose...</option>
                           <option>Abbotsford</option>
                           <option>Burnaby</option>
@@ -79,11 +79,11 @@
                       </div>
                     <div class="form-group">
                         <label for="exampleFormControl">Address</label>
-                        <input class="form-control"></input>
+                        <input class="form-control" id="address"></input>
                     </div>
                     <p></p>
                         <div class="mb-3">
-                            <button class="btn btn-primary" type="submit">save</button>
+                            <button class="btn btn-primary" id="editAccount" type="submit">save</button>
                         </div>
     
                 </form>
