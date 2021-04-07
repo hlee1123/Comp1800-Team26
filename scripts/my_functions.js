@@ -49,25 +49,29 @@ function writeStores() {
 function displayStores(){
     db.collection("stores").get()
     .then(function(snap){
+        console.log(snap);
+
         snap.forEach(function(doc){
-            var pic = doc.data().picture;   //key "picture"
+            console.log(doc.data());
+
+            // var pic = doc.data().picture;   //key "picture"
             var name = doc.data().name;             //gets the name field
             var address = doc.data().address;             //gets the address field
             var phone = doc.data().phone;             //gets the phone field
 
-            console.log(n);
-
             // construct the string for card
             var codestring = '<div>'+
-            '<img src="/images/1.png' + pic + '" class="store-img-top">'+
             '<div class="store-body">'+
             '<h5 class="store-name">' + name + '</h5>'+
+            '<h6 class="store-address">'+ "Address" + address + '</h6>' +
+            '<h6 class="store-phone">'+ "Phone number: " + phone + '</h6>' +
+
             '<p class="store-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>'+
             '<p class="store-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
             '</div>';
             
             // append with jquery to DOM
-            $("#stores-go-here").append(codestring);
+            $(".stores-go-here").append(codestring);
         })
 
     })
