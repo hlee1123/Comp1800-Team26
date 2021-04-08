@@ -97,6 +97,35 @@ function writeProducts() {
 }
 //writeProducts();
 
+function displayProducts(){
+    db.collection("products").get()
+    .then(function(snap){
+        console.log(snap);
+
+        snap.forEach(function(doc){
+            console.log(doc.data());
+
+            // var pic = doc.data().picture;   //key "picture"
+            var name = doc.data().name;             //gets the name field
+            var price = doc.data().price;             //gets the price field
+
+            // construct the string for card
+            var codestring = '<div>'+
+            '<div class="product-body">'+
+            '<h5 class="product-name">' + name + '</h5>'+
+            '<h6 class="product-price">'+ "Price: " + price + '</h6>' +
+
+            '<p class="product-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>'+
+            '</div>';
+            
+            // append with jquery to DOM
+            $(".products-go-here").append(codestring);
+        })
+
+    })
+}
+displayProducts();
+
 // function citiesQuery(){
 //     db.collection("cities")
 //     .where("population", ">", 1000000)
