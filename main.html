@@ -29,13 +29,10 @@
                 <a class="navbar-brand" href="main.html">FaceMasksApp</a>
             </div>
 
-
             <form class="d-flex2">
                 <button class="btn btn-outline-success2" type="submit"><i class="bi bi-search"></i></button>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
             </form>
-
 
         </div>
     </nav>
@@ -45,7 +42,6 @@
         <h1> You are now logged in. </h1>
     </div>
 
-    <!-- <div id="stores-go-here"> </div> -->
     <div id="products-go-here"> </div>
 
     <div>
@@ -64,25 +60,22 @@
     <div class="stores-go-here"> </div>
       
     <!----placeholder for map-->
-    <div class="map">
+    <!-- <div id="googleMap" style="width:100%;height:400px;"></div> -->
 
-    </div>
-
+  
     <div id="button-container">
         <div class="bottom-1">
-            <a href="filtersList.html"><button type="button" class="btn btn-light btn-lg">List</button></a>
+            <a href="ProductList.html"><button type="button" class="btn btn-light btn-lg">List</button></a>
         </div>
 
         <div class="bottom-2">
-            <button type="button" class="btn btn-light btn-lg">Map</button>
+            <a href="map.html"><button type="button" class="btn btn-light btn-lg">Map</button></a>
         </div>
     </div>
 
 
     <div class="container-fluid fixed-bottom">
         <nav class="navbar navbar-expand navbar-light bg-light">
-
-
 
             <div class="collapse navbar-collapse">
 
@@ -92,7 +85,7 @@
                                 style="font-size:30px;"></i><br />Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-person"
+                        <a class="nav-link" href="account.html"><i class="bi bi-person"
                                 style="font-size:30px;"></i><br />Account</a>
                     </li>
                     <li class="nav-item">
@@ -139,6 +132,8 @@
     <!--------------------------------------------------------------------->
 
     <script src="scripts/my_functions.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
 
 </body>
 
