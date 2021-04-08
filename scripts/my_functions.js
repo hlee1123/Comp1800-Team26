@@ -175,23 +175,28 @@ function reviewsQuery(){
 }
 reviewsQuery();
 
-function editSellerAccount(){
-    document.getElementById("editAccount").addEventListener('click', function(){
-        firebase.auth().onAuthStateChanged(function(user){
+function getStoreInputs() {
+    document.getElementById("editProfile").addEventListener('click', function () {
+        firebase.auth().onAuthStateChanged(function (user) {
 
+            // get various values from the form
             var name = document.getElementById("store-name").value;
+            var address = document.getElementById("store-address").value;
             var city = document.getElementById("city").value;
-            var address = document.getElementById("address").value;
+
+            // Either true or false
+            //var mon = document.getElementById("monday").checked;
+            //var tue = document.getElementById("tuesday").checked;
 
             db.collection("users")
                 .doc(user.uid)
-                .colloction("stores")
-                .update({
-                    "store-name": name,
-                    "city": city,
-                    "address": address
+                .collection("stores")
+                .add({
+                    "Store name": name,   //from text field
+                    "Address": address,     
+                    "city": city      //from checkbox
                 })
         })
     })
 }
-editSellerAccount();
+getStoreInputs();

@@ -47,46 +47,21 @@
         <div>
             <img src="store-placeholder.png" class="img-fluid" alt="Face Mask image" height="200" width="200">
         </div>
-            <form>
-                <div class="profileConfig">
-                    <h3>Edit Profile</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControl">Store Name</label>
-                        <input class="form-control" id="store-name"></input>
-                    </div>
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Store Image</label>
-                        <input class="form-control" type="file" id="formFile" accept="image/*" id="store-image">
-                      </div>
-                    <div class="form-group">
-                        <label for="inputState">City</label>
-                        <select id="inputState" class="form-control" id="city">
-                          <option selected>Choose...</option>
-                          <option>Abbotsford</option>
-                          <option>Burnaby</option>
-                          <option>Chiliwack</option>
-                          <option>Coquitlam</option>
-                          <option>Delta</option>
-                          <option>Downtown Vancouver</option>
-                          <option>Kamloops</option>
-                          <option>Kelowna</option>
-                          <option>Maple Ridge</option>
-                          <option>North Vancouver</option>
-                          <option>Richmond</option>
-                          <option>Surrey</option>
-                          <option>Victoria</option>
-                        </select>
-                      </div>
-                    <div class="form-group">
-                        <label for="exampleFormControl">Address</label>
-                        <input class="form-control" id="address"></input>
-                    </div>
-                    <p></p>
-                        <div class="mb-3">
-                            <button class="btn btn-primary" id="editAccount" type="submit">save</button>
-                        </div>
-    
-                </form>
+        
+        <div>
+        <label> Store Name </label>
+        <input id="store-name" type="text">
+        <br>
+        <p></p>
+        <label> City</label>
+        <input id="city" type="text">
+        <br>
+        <p></p>
+        <label> Address </label>
+        <input id="store-address" type="text">
+        <br>
+        <br>
+        <button type="button" id="editProfile" class="btn btn-outline-success">Finish</button>
         </div>
     </div>
 
