@@ -27,18 +27,18 @@ function writeStores() {
     var storesRef = db.collection("stores");
     storesRef.add({
        
-        name: "Store1",
+        name: "Store 1",
         address: 123,
         phone: 604123456,
         
     });
     storesRef.add({
-        name: "Store2",
+        name: "Store 2",
         address: 123,
         phone: 604123456,
     });
     storesRef.add({
-        name: "Store3",
+        name: "Store 3",
         address: 123,
         phone: 604123456,
     });
