@@ -201,6 +201,75 @@ function getStoreInputs() {
 }
 getStoreInputs();
 
+function getItemInputs() {
+    document.getElementById("addItem").addEventListener('click', function () {
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            // get various values from the form
+            var name = document.getElementById("item-name").value;
+            var type = document.getElementById("mask-type").value;
+            var desc = document.getElementById("description").value;
+            var stock = document.getElementById("stock").value;
+            var price = document.getElementById("price").value;
+
+
+            // Either true or false
+            var s = document.getElementById("Small").checked;
+            var m = document.getElementById("Medium").checked;
+            var l = document.getElementById("Large").checked;
+            var k = document.getElementById("kids").checked;
+
+            db.collection("users")
+                .doc(user.uid)
+                .collection("items")
+                .add({
+                    "Item name": name2,   //from text field
+                    "Item type": type,     
+                    "Description": desc,     
+                    "stock": stock,     
+                    "price": price,     
+                    "Small": s,     
+                    "Medium": m,     
+                    "Large": l,         
+                    "Kids": k      //from checkbox
+                })
+        })
+    })
+}
+getItemInputs();
+
+function getReviews() {
+    document.getElementById("addReview").addEventListener('click', function () {
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            // get various values from the form
+            var email = document.getElementById("email").value;
+            var desc = document.getElementById("message").value;
+            var one = document.getElementById("star1").value;
+            var two = document.getElementById("star2").value;
+            var three = document.getElementById("star3").value;
+            var four = document.getElementById("star4").value;
+            var five = document.getElementById("star5").value;
+
+
+            db.collection("users")
+                .doc(user.uid)
+                .collection("reviews")
+                .add({
+                    "Email": email,   //from text field   
+                    "Description": desc,     
+                    "One Star": one,     
+                    "Two Star": two,     
+                    "Three Star": three,     
+                    "Four Star": four,     
+                    "Five Star": five     
+
+                })
+        })
+    })
+}
+getReviews();
+
 // function myMap() {
 //     var mapProp= {
 //       center:new google.maps.LatLng(51.508742,-0.120850),

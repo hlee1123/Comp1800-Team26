@@ -47,53 +47,41 @@
     <div class="container">
         <div class="row">
         <table width="100%" border="0">
-          <div class="col-md-9 col-md-offset-0">
+
             <tr><td width="77%">
-            <div class="">
-              <form class="form-horizontal" action="send.php" method="post">
-              <fieldset>
+
         
-                <!-- Email input-->
-                <div class="form-group">
-                  <label class="col-md-3 control-label" for="email">Your email</label>
-                  <div class="col-md-9">
-                    <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
-                  </div>
-                </div>
+                  <label>Your email</label>
+                  <input id="email"type="text" class="form-control">
+ 
+
         
                 <!-- Message body -->
-                <div class="form-group">
-                  <label class="col-md-3 control-label" for="message">Your message</label>
-                  <div class="col-md-9">
-                    <textarea class="form-control" id="message" name="message" placeholder="Please enter your feedback here..." rows="5"></textarea>
-                  </div>
-                </div>
+
+                  <label>Your message</label>
+
+                  <textarea class="form-control" id="message" placeholder="Please enter your feedback here..." rows="5"></textarea>
+
     
     
                 <!-- Rating -->
-                <div class="form-group">
                   <div class="rate">
-                    <input type="radio" id="star5" name="rate" value="5" />
-                    <label for="star5" title="text">5 stars</label>
-                    <input type="radio" id="star4" name="rate" value="4" />
-                    <label for="star4" title="text">4 stars</label>
-                    <input type="radio" id="star3" name="rate" value="3" />
-                    <label for="star3" title="text">3 stars</label>
-                    <input type="radio" id="star2" name="rate" value="2" />
-                    <label for="star2" title="text">2 stars</label>
-                    <input type="radio" id="star1" name="rate" value="1" />
-                    <label for="star1" title="text">1 star</label>
+                    <input type="radio" id="star5"  value="5" />
+                    <label>5 stars</label>
+                    <input type="radio" id="star4"  value="4" />
+                    <label>4 stars</label>
+                    <input type="radio" id="star3"  value="3" />
+                    <label>3 stars</label>
+                    <input type="radio" id="star2"  value="2" />
+                    <label>2 stars</label>
+                    <input type="radio" id="star1"  value="1" />
+                    <label>1 star</label>
                   </div>
                 </div>
-                                <!-- Form actions -->
-                 <div class="form-group">
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary btn-md">Submit</button>
+
+                        <button type="button" class="btn btn-primary btn-md" id="addReview">Submit</button>
                         <button type="reset" class="btn btn-default btn-md">Clear</button>
-                    </div>
-                </div>
-                </fieldset>
-                </form>
+
         </td>
 
             </div>
