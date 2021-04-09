@@ -12,30 +12,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="./styles/my_bootstrap.css">
     <link rel="stylesheet" href="./styles/myownstyle.css">
 </head>
 
 <body>
-    <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
-    <!-- Header Navigation Bar -->
+
     <nav class="navbar sticky-top navbar-expand-xxl navbar-light bg-light">
         <div class="container-fluid">
             <div class="brand-centered">
-                <a class="navbar-brand" href="main.html">My Account</a>
+                <a class="navbar-brand" href="main.html">My Favourite</a>
             </div>
+
+            <form class="d-flex2">
+                <button class="btn btn-outline-success2" type="submit"><i class="bi bi-search"></i></button>
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+
         </div>
     </nav>
-       
 
-    <div class="container">
-        <h1 class="display-4"> <span id="name-goes-here"></span> </h1>
-    </div>   
+    <div id="button-container">
+        <div class="bottom-1">
+            <a href="ProductList.html"><button type="button" class="btn btn-light btn-lg">List</button></a>
+        </div>
 
-   
+        <div class="bottom-2">
+            <a href="map.html"><button type="button" class="btn btn-light btn-lg">Map</button></a>
+        </div>
+    </div>
+
+
     <div class="container-fluid fixed-bottom">
         <nav class="navbar navbar-expand navbar-light bg-light">
 
@@ -43,7 +52,7 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="main.html"><i class="bi bi-house-door"
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door"
                                 style="font-size:30px;"></i><br />Home</a>
                     </li>
                     <li class="nav-item">
@@ -55,7 +64,7 @@
                                 style="font-size:30px;"></i><br />Favourite</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.html"><i class="bi bi-cart2" style="font-size:30px;"></i><br />Cart</a>
+                        <a class="nav-link" href="#"><i class="bi bi-cart2" style="font-size:30px;"></i><br />Cart</a>
                     </li>
                     <li class="nav-item dropup">
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
@@ -71,10 +80,10 @@
         </nav>
     </div>
 
+
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
@@ -95,6 +104,7 @@
 
     <script src="scripts/my_functions.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
 
 </body>
 
