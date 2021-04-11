@@ -16,6 +16,10 @@
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="./styles/my_bootstrap.css">
     <link rel="stylesheet" href="./styles/myownstyle.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    <link href="styles/style.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -42,7 +46,47 @@
         <h2> You are now logged in. </h2>
     </div>
 
-    <div id="products-go-here"> </div>
+
+<main>
+
+    <section id="main" class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="text-white">Find Your Mask</h1>
+          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  
+    <div class="album py-5 bg-light">
+      <div class="container">
+  
+        <div id="stores" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  
+        </div>
+      </div>
+    </div>
+  
+  </main>
+  
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+    </div>
+  </footer>
+  
+  
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+    <!-- <div id="products-go-here"> </div>
 
     <div>
         <img src="1.jpg" class="img-fluid" alt="Face Mask image">
@@ -54,10 +98,10 @@
                 <button type="button" class="btn btn-light btn-lg">Buy now</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
-    <div class="stores-go-here"> </div>
+    <!-- <div class="stores"> </div> -->
       
     <!----placeholder for map-->
     <!-- <div id="googleMap" style="width:100%;height:400px;"></div> -->
@@ -99,7 +143,6 @@
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
                                 class="bi bi-three-dots" style="font-size:30px;"></i><br />More</a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                            <li><a class="dropdown-item" href="#">Donation</a></li>
                             <li><a class="dropdown-item" href="#">Customer Service</a></li>
                         </ul>
                     </li>

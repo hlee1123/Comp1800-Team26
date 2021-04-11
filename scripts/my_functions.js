@@ -46,6 +46,42 @@ function writeStores() {
 }
 //writeStores();
 
+// function displayStores(){
+//     db.collection("stores").get()
+//     .then(function(snap){
+//         console.log(snap);
+
+//         snap.forEach(function(doc){
+//             console.log(doc.data());
+
+//             var pic = doc.data().pic;   //key "picture"
+//             var name = doc.data().name;             //gets the name field
+//             var address = doc.data().address;             //gets the address field
+//             var phone = doc.data().phone;             //gets the phone field
+
+//             // construct the string for card
+//             var codestring = '<div>'+
+            
+//             '<img src="images/' + pic + '" class="card-img-top">'+
+
+//             '<div class="store-body">'+
+//             '<h5 class="store-name">' + name + '</h5>'+
+//             '<h6 class="store-address">'+ "Address" + address + '</h6>' +
+//             '<h6 class="store-phone">'+ "Phone number: " + phone + '</h6>' +
+
+//             '<p class="store-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>'+
+//             '<p class="store-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
+//             '</div>';
+            
+//             // append with jquery to DOM
+//             $(".stores-go-here").append(codestring);
+//         })
+
+//     })
+// }
+// displayStores();
+
+
 function displayStores(){
     db.collection("stores").get()
     .then(function(snap){
@@ -54,29 +90,42 @@ function displayStores(){
         snap.forEach(function(doc){
             console.log(doc.data());
 
-            // var pic = doc.data().picture;   //key "picture"
+            var pic = doc.data().pic;   //key "picture"
             var name = doc.data().name;             //gets the name field
             var address = doc.data().address;             //gets the address field
             var phone = doc.data().phone;             //gets the phone field
 
-            // construct the string for card
-            var codestring = '<div>'+
-            '<div class="store-body">'+
-            '<h5 class="store-name">' + name + '</h5>'+
-            '<h6 class="store-address">'+ "Address" + address + '</h6>' +
-            '<h6 class="store-phone">'+ "Phone number: " + phone + '</h6>' +
+            let codestring = `
+                <div class="col">
+                    <div class="card shadow-sm">
+                    <img src="${pic}" class="bd-placeholder-img card-img-top" width="100%" height="225">
 
-            '<p class="store-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>'+
-            '<p class="store-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
-            '</div>';
+                    <div class="card-body">
+                        <h5 class="store-name">${name} </h5>
+                        <h5 class="store-address">Address: ${address} </h5>
+                        <h5 class="store-address"> Phone Number: ${phone} </h5>
+
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            `;
             
             // append with jquery to DOM
-            $(".stores-go-here").append(codestring);
+            $("#stores").append(codestring);
         })
 
     })
 }
 displayStores();
+
 
 function writeProducts() {
     var productRef = db.collection("products");

@@ -3,13 +3,20 @@ function getReviews() {
         firebase.auth().onAuthStateChanged(function (user) {
 
             // get various values from the form
+            var review;
             var email = document.getElementById("email").value;
             var desc = document.getElementById("message").value;
-            var one = document.getElementById("star1").value;
-            var two = document.getElementById("star2").value;
-            var three = document.getElementById("star3").value;
-            var four = document.getElementById("star4").value;
-            var five = document.getElementById("star5").value;
+            if($('#star5').is(':checked')) {
+                review =  document.getElementById("star5").value;
+            } else if ($('#star4').is(':checked')) {
+                review =  document.getElementById("star4").value;
+            } else if ($('#star3').is(':checked')) {
+                review =  document.getElementById("star3").value;
+            } else if ($('#star2').is(':checked')) {
+                review =  document.getElementById("star2").value;
+            } else if ($('#star1').is(':checked')) {
+                review =  document.getElementById("star1").value;
+            }
 
 
             db.collection("users")
@@ -17,27 +24,11 @@ function getReviews() {
                 .collection("reviews")
                 .add({
                     "Email": email,   //from text field   
-                    "Description": desc,     
-                    "One Star": one,     
-                    "Two Star": two,     
-                    "Three Star": three,     
-                    "Four Star": four,     
-                    "Five Star": five     
+                    "Description": desc,        
+                    "Rating": review    
 
                 })
         })
     })
 }
 getReviews();
-
-// function myMap() {
-//     var mapProp= {
-//       center:new google.maps.LatLng(51.508742,-0.120850),
-//       zoom:5,
-//     };
-//     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-//     }
-
-
-
-// myMap();
