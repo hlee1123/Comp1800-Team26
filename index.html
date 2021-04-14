@@ -16,6 +16,8 @@
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="./styles/my_bootstrap.css">
     <link rel="stylesheet" href="./styles/myownstyle.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    <link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,39 +45,36 @@
     <div class="container">
         <h3 class="display-4">Welcome!</h3>
     </div>
-    <div>
-        <img src="1.jpg" class="img-fluid" alt="Face Mask image">
-    </div>
 
-    <div class="container">
-        <div class="center">
-            <div class="overflow-visible">
-                <button type="button" class="btn btn-light btn-lg">Buy now</button>
+    <main>
+
+        <section id="main" class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="text-white">Find Your Mask</h1>
+                    <p class="lead text-muted">To support local businesses who produce personal protective equipments like face masks that reduce the spread of the virus, we came up with an idea to create an application. </p>
+                    <p>
+                        <a href="ProductList.html" class="btn btn-primary my-2">List</a>
+                        <a href="map.html" class="btn btn-secondary my-2">Map</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div id="stores" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                </div>
             </div>
         </div>
-    </div>
-    <!----placeholder for map-->
-    <div class="map">
 
-    </div>
-
-    <div id="button-container">
-        <div class="bottom-1">
-            <a href="filtersList.html"><button type="button" class="btn btn-light btn-lg">List</button></a>
-        </div>
-
-        <div class="bottom-2">
-            <button type="button" class="btn btn-light btn-lg">Map</button>
-        </div>
-    </div>
-
-
+    </main>
 
 
     <div class="container-fluid fixed-bottom">
         <nav class="navbar navbar-expand navbar-light bg-light">
-
-
 
             <div class="collapse navbar-collapse">
 
@@ -85,7 +84,7 @@
                                 style="font-size:30px;"></i><br />Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="account.html"><i class="bi bi-person"
+                        <a class="nav-link" href="#"><i class="bi bi-person"
                                 style="font-size:30px;"></i><br />Account</a>
                     </li>
                     <li class="nav-item">
@@ -93,13 +92,13 @@
                                 style="font-size:30px;"></i><br />Favourite</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.html"><i class="bi bi-cart2" style="font-size:30px;"></i><br />Cart</a>
+                        <a class="nav-link" href="#"><i class="bi bi-cart2"
+                                style="font-size:30px;"></i><br />Cart</a>
                     </li>
                     <li class="nav-item dropup">
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
                                 class="bi bi-three-dots" style="font-size:30px;"></i><br />More</a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                            <li><a class="dropdown-item" href="#">Donation</a></li>
                             <li><a class="dropdown-item" href="#">Customer Service</a></li>
                         </ul>
                     </li>
@@ -108,7 +107,6 @@
             </div>
         </nav>
     </div>
-
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -129,11 +127,6 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-
-
-
-
-
 
 </body>
 

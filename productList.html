@@ -52,32 +52,33 @@
     </br>
     <div class="container">
         <div class="btn-group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+            <!-- <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Filter
-            </button>
-            <ul class="dropdown-menu">
+            </button> -->
+            <!-- <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Type</a></li>
                 <li><a class="dropdown-item" href="#">Rating</a></li>
                 <li><a class="dropdown-item" href="#">Price</a></li>
                 <li><a class="dropdown-item" href="#">Distance</a></li>
             </ul>
-        </div>
+        </div> -->
         <div class="btn-group">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Sort by
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Lowest price</a></li>
-                <li><a class="dropdown-item" href="#">Highest price</a></li>
-                <li><a class="dropdown-item" href="#">Most reviwed</a></li>
-                <li><a class="dropdown-item" href="#">Recommended</a></li>
+                <li><a id="lowestPrice" class="dropdown-item" href="#">Lower price</a></li>
+                <li><a id="highestPrice" class="dropdown-item" href="#">Highest price</a></li>
+
+                <li><a id="Review" class="dropdown-item" href="#">Most reviewed</a></li>
+
             </ul>
         </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <h4>All Results</h4>
         <ol>
             <li><b>Store Name<br>⭐⭐⭐⭐<a href="review.html">123 Reviews</a><br>Address<br>Price<br>
@@ -182,17 +183,23 @@
             </li>
 
         </ol>
-    </div>
+    </div> -->
 
-    <div class="products-go-here"> </div>
+   
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div id="products" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            </div>
+        </div>
+    </div>
 
 
 
 
     <div class="container-fluid fixed-bottom">
         <nav class="navbar navbar-expand navbar-light bg-light">
-
-
 
             <div class="collapse navbar-collapse">
 
@@ -216,7 +223,6 @@
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
                                 class="bi bi-three-dots" style="font-size:30px;"></i><br />More</a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                            <li><a class="dropdown-item" href="#">Donation</a></li>
                             <li><a class="dropdown-item" href="#">Customer Service</a></li>
                         </ul>
                     </li>
@@ -240,13 +246,16 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-    <script src="scripts/my_functions.js"></script>
-    <script src="scripts/firebase_api.js"></script>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-
+    <script src="scripts/firebase_api.js"></script>
+    <script src="scripts/products.js"></script>
 </body>
 
 </html>

@@ -44,42 +44,6 @@ function writeStores() {
     });
     
 }
-//writeStores();
-
-// function displayStores(){
-//     db.collection("stores").get()
-//     .then(function(snap){
-//         console.log(snap);
-
-//         snap.forEach(function(doc){
-//             console.log(doc.data());
-
-//             var pic = doc.data().pic;   //key "picture"
-//             var name = doc.data().name;             //gets the name field
-//             var address = doc.data().address;             //gets the address field
-//             var phone = doc.data().phone;             //gets the phone field
-
-//             // construct the string for card
-//             var codestring = '<div>'+
-            
-//             '<img src="images/' + pic + '" class="card-img-top">'+
-
-//             '<div class="store-body">'+
-//             '<h5 class="store-name">' + name + '</h5>'+
-//             '<h6 class="store-address">'+ "Address" + address + '</h6>' +
-//             '<h6 class="store-phone">'+ "Phone number: " + phone + '</h6>' +
-
-//             '<p class="store-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>'+
-//             '<p class="store-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
-//             '</div>';
-            
-//             // append with jquery to DOM
-//             $(".stores-go-here").append(codestring);
-//         })
-
-//     })
-// }
-// displayStores();
 
 
 function displayStores(){
@@ -108,8 +72,8 @@ function displayStores(){
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            
+                            <a href="ProductList.html" class="btn btn-primary my-2">View</a>
                         </div>
                         <small class="text-muted">9 mins</small>
                         </div>
@@ -127,76 +91,8 @@ function displayStores(){
 displayStores();
 
 
-function writeProducts() {
-    var productRef = db.collection("products");
-    productRef.add({
-       
-        name: "Mask1",
-        price: 10,
-    });
-    productRef.add({
-        name: "Mask2",
-        price: 20,
-    });
-    productRef.add({
-        name: "Mask3",
-        price: 30,
-    });
-    
-}
-//writeProducts();
 
-function displayProducts(){
-    db.collection("products").get()
-    .then(function(snap){
-        console.log(snap);
 
-        snap.forEach(function(doc){
-            console.log(doc.data());
-
-            // var pic = doc.data().picture;   //key "picture"
-            var name = doc.data().name;             //gets the name field
-            var price = doc.data().price;             //gets the price field
-
-            // construct the string for card
-            var codestring = '<div>'+
-            '<div class="product-body">'+
-            '<h5 class="product-name">' + name + '</h5>'+
-            '<h6 class="product-price">'+ "Price: " + price + '</h6>' +
-
-            '<p class="product-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>'+
-            '</div>';
-            
-            // append with jquery to DOM
-            $(".products-go-here").append(codestring);
-        })
-
-    })
-}
-displayProducts();
-
-// function citiesQuery(){
-//     db.collection("cities")
-//     .where("population", ">", 1000000)
-//     //.where("hemisphere", "==", "south")
-//     //.limit(1)
-//     //.orderBy("population")
-//     .orderBy("population", "desc")
-//     .get()
-//     .then(function(snap){
-//         snap.forEach(function(doc){
-//             var n = doc.data().name;
-//             var pop = doc.data().population;
-//             console.log(n);
-//             var newdom = "<p> " + n + " " + pop + "</p>";
-//             $("#cities-go-here").append(newdom);
-//             //document.getElementById("cities-go-here").innerHTML = newdom;
-//         })
-//     })
-// }
-// citiesQuery();
-
-// Initialize and add the map
 function writeReviews(){
     var reviewRef = db.collection("reviews");
     reviewRef.add({
