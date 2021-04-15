@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Face Masks App</title>
+    <title>Face Mask App</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -26,7 +26,7 @@
     <nav class="navbar sticky-top navbar-expand-xxl navbar-light bg-light">
         <div class="container-fluid">
             <div class="brand-centered">
-                <a class="navbar-brand" href="main.html">FaceMasksApp</a>
+                <a class="navbar-brand" href="main.html">FaceMaskApp</a>
             </div>
 
 
@@ -61,20 +61,20 @@
         </div>
     </div>
 
-        <!----placeholder for map-->
-        <div class="map">
+    <!----placeholder for map-->
+    <div class="map">
 
+    </div>
+
+    <div id="button-container">
+        <div class="bottom-1">
+            <button type="button" class="btn btn-light btn-lg">List</button>
         </div>
-    
-        <div id="button-container">
-            <div class="bottom-1">
-                <button type="button" class="btn btn-light btn-lg">List</button>
-            </div>
-    
-            <div class="bottom-2">
-                <button type="button" class="btn btn-light btn-lg">Map</button>
-            </div>
+
+        <div class="bottom-2">
+            <button type="button" class="btn btn-light btn-lg">Map</button>
         </div>
+    </div>
 
     <div class="container-fluid fixed-bottom">
         <nav class="navbar navbar-expand navbar-light bg-light">
@@ -148,7 +148,7 @@
                     snap.forEach(function (doc) {
                         var n = doc.data().name;
                         console.log(n);
-                        var userEmail= doc.data().email;
+                        var userEmail = doc.data().email;
                         console.log(userEmail);
                         document.getElementById("name-goes-here").innerText = n;
                     })
@@ -157,7 +157,7 @@
         }
         displayName();
 
-</script>
+    </script>
 
 
 </body>
